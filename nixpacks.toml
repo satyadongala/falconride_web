@@ -1,0 +1,10 @@
+[variables]
+CI = "false"
+GENERATE_SOURCEMAP = "false"
+NODE_ENV = "production"
+
+[phases.build]
+cmds = ["yarn build"]
+
+[start]
+cmd = "npx --yes serve@14 -s build -l ${PORT:-3000}"

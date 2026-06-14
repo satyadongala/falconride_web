@@ -58,6 +58,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "start:prod": "npx --yes serve@14 -s build -l ${PORT:-3000}",
     "test": "craco test"
   },
   "browserslist": {
