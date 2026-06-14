@@ -13,7 +13,7 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App flex flex-col min-h-screen">
+      <div className="App flex flex-col min-h-screen overflow-x-hidden">
         <Navbar />
         <main className="flex-grow">
           <Routes>
@@ -25,7 +25,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <Toaster position="top-right" />
+        <Toaster position="bottom-center" />
       </div>
     </BrowserRouter>
   );

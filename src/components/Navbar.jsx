@@ -16,6 +16,17 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
@@ -33,13 +44,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group min-w-0">
             <img 
               src="https://customer-assets.emergentagent.com/job_falcon-connect/artifacts/31xyo2l8_WhatsApp%20Image%202026-02-13%20at%2011.42.01.jpeg" 
               alt="Falcon Ride Logo" 
-              className="h-14 w-14 rounded-full object-cover transition-transform duration-300 group-hover:scale-110 border-2 border-[#4A90A4]"
+              className="h-10 w-10 sm:h-14 sm:w-14 rounded-full object-cover transition-transform duration-300 group-hover:scale-110 border-2 border-[#4A90A4] shrink-0"
             />
-            <span className="text-2xl font-bold text-[#0A2540] tracking-tight">
+            <span className="text-lg sm:text-2xl font-bold text-[#0A2540] tracking-tight truncate">
               Falcon<span className="text-[#4A90A4]">Ride</span>
             </span>
           </Link>

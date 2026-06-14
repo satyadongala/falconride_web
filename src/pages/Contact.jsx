@@ -8,19 +8,19 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Get in Touch</h1>
+          <p className="text-base sm:text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto">
             Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
           </p>
         </div>
       </section>
 
       {/* Contact Content */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-12">
             {/* Contact Info Cards */}
             <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-[#4A90A4] group">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#4A90A4]/20 to-[#0A2540]/20 mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -56,7 +56,7 @@ const Contact = () => {
           {/* Map Section */}
           <div className="mt-16">
             <Card className="p-4 border-2 border-gray-100 overflow-hidden">
-              <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">
+              <div className="w-full h-64 sm:h-80 md:h-96 bg-gray-200 rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="mx-auto text-gray-400 mb-3" size={48} />
                   <p className="text-gray-600 font-medium">Serving across Canada</p>
@@ -71,12 +71,12 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white">
+      <section className="py-10 sm:py-16 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8">
             Download the app or join our driver community today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

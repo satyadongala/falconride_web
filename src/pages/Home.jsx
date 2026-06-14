@@ -15,45 +15,38 @@ const Home = () => {
     Calendar, TrendingUp, Wallet
   };
 
+  const bannerItems = [
+    { emoji: '🚀', text: 'Launching Soon..!' },
+    { emoji: '👀', text: 'Stay Tuned ..!' },
+    { emoji: '⏳', text: 'Arriving Soon ..!' },
+    { emoji: '🔥', text: 'Something Big is Coming..!' },
+    { emoji: '🚖', text: 'Rolling Soon ..!' },
+  ];
+
   return (
     
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       {/* Scrolling Banner Section */}
-      <section className="bg-gradient-to-r from-[#D4AF37] via-[#B8941F] to-[#D4AF37] py-6 overflow-hidden relative" style={{ marginTop: '80px' }}>
+      <section className="bg-gradient-to-r from-[#D4AF37] via-[#B8941F] to-[#D4AF37] py-4 sm:py-6 overflow-hidden relative">
         <div className="flex overflow-hidden w-full">
           <div 
-            className="flex whitespace-nowrap space-x-12"
+            className="flex whitespace-nowrap space-x-8 sm:space-x-12"
             style={{
               animation: 'scroll-banner 20s linear infinite',
               width: '200%'
             }}
           >
-           
-            <div className="flex items-center space-x-4 text-[#0A2540] flex-shrink-0">
-              <span className="text-3xl font-bold">🚀</span>
-              <span className="text-2xl font-bold">Launching Soon..!</span>
-            </div>
-            <div className="flex items-center space-x-4 text-[#0A2540] flex-shrink-0">
-              <span className="text-3xl font-bold">👀</span>
-              <span className="text-2xl font-bold">Stay Tuned ..!</span>
-            </div>
-            <div className="flex items-center space-x-4 text-[#0A2540] flex-shrink-0">
-              <span className="text-3xl font-bold">⏳</span>
-              <span className="text-2xl font-bold">Arriving Soon ..!</span>
-            </div>
-            <div className="flex items-center space-x-4 text-[#0A2540] flex-shrink-0">
-              <span className="text-3xl font-bold">🔥</span>
-              <span className="text-2xl font-bold">Something Big is Coming..!</span>
-            </div>
-            <div className="flex items-center space-x-4 text-[#0A2540] flex-shrink-0">
-              <span className="text-3xl font-bold">🚖</span>
-              <span className="text-2xl font-bold">Rolling Soon ..!</span>
-            </div>
+            {[...bannerItems, ...bannerItems].map((item, index) => (
+              <div key={index} className="flex items-center space-x-3 sm:space-x-4 text-[#0A2540] flex-shrink-0">
+                <span className="text-xl sm:text-3xl font-bold">{item.emoji}</span>
+                <span className="text-base sm:text-xl md:text-2xl font-bold">{item.text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
       {/* Hero Section */}
-      <section className="relative h-96 md:h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-72 sm:h-96 md:h-[500px] flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img 
@@ -67,7 +60,7 @@ const Home = () => {
  
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Reliable Local Rides
             <span className="block text-[#D4AF37] mt-2">When You Need Them</span>
           </h1>
@@ -89,16 +82,16 @@ const Home = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0A2540] mb-4">How It Works</h2>
-            <p className="text-xl text-gray-600">Get a ride in three simple steps</p>
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2540] mb-4">How It Works</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">Get a ride in three simple steps</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {mockData.howItWorks.map((step, index) => (
               <div key={step.id} className="relative group">
-                <Card className="p-8 text-center h-full border-2 border-gray-100 hover:border-[#4A90A4] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white">
+                <Card className="p-5 sm:p-8 text-center h-full border-2 border-gray-100 hover:border-[#4A90A4] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#4A90A4] to-[#0A2540] text-white text-2xl font-bold mb-6 group-hover:scale-110 transition-transform duration-300">
                     {step.step}
                   </div>
@@ -117,11 +110,11 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0A2540] mb-4">Why Choose Falcon Ride?</h2>
-            <p className="text-xl text-gray-600">Experience the difference with our premium service</p>
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2540] mb-4">Why Choose Falcon Ride?</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">Experience the difference with our premium service</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mockData.features.map((feature) => {
@@ -147,7 +140,7 @@ const Home = () => {
       </section>
 
       {/* Driver Opportunity Section */}
-      <section className="py-20 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -157,10 +150,10 @@ const Home = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Drive With Us and Earn More</h2>
-              <p className="text-xl text-gray-200 mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Drive With Us and Earn More</h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 md:mb-8">
                 Join our growing community of drivers and start earning on your own schedule.
               </p>
               <div className="space-y-6 mb-8">
@@ -191,11 +184,11 @@ const Home = () => {
                 </Button>
               </Link>
             </div>
-            <div className="relative">
+            <div className="relative w-full">
               <img 
                 src="https://images.unsplash.com/photo-1652994989723-e631e93d8304" 
                 alt="Happy Driver" 
-                className="rounded-2xl shadow-2xl"
+                className="w-full h-auto rounded-2xl shadow-2xl object-cover"
               />
             </div>
           </div>
@@ -203,15 +196,15 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0A2540] mb-4">What Our Users Say</h2>
-            <p className="text-xl text-gray-600">Real reviews from real people</p>
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2540] mb-4">What Our Users Say</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">Real reviews from real people</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {mockData.testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="p-8 hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-[#4A90A4]">
+              <Card key={testimonial.id} className="p-5 sm:p-8 hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-[#4A90A4]">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="text-[#D4AF37] fill-current" size={20} />
@@ -236,17 +229,17 @@ const Home = () => {
       </section>
 
       {/* Cities We Serve Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0A2540] mb-4">Cities We Serve</h2>
-            <p className="text-xl text-gray-600">Available in major cities across Canada</p>
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2540] mb-4">Cities We Serve</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">Available in major cities across Canada</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
             {mockData.cities.map((city, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 border-2 border-gray-100 hover:border-[#4A90A4] group cursor-pointer">
-                <MapPin className="mx-auto text-[#4A90A4] mb-3 group-hover:scale-110 transition-transform duration-300" size={32} />
-                <p className="font-semibold text-[#0A2540]">{city}</p>
+              <Card key={index} className="p-4 sm:p-6 text-center hover:shadow-lg transition-all duration-300 border-2 border-gray-100 hover:border-[#4A90A4] group cursor-pointer">
+                <MapPin className="mx-auto text-[#4A90A4] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300" size={28} />
+                <p className="font-semibold text-sm sm:text-base text-[#0A2540] break-words">{city}</p>
               </Card>
             ))}
           </div>
@@ -254,11 +247,11 @@ const Home = () => {
       </section>
 
       {/* Download App Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0A2540] mb-6">Download Falcon Ride App</h2>
-            <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2540] mb-4 md:mb-6">Download Falcon Ride App</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto">
               Get started today and experience seamless transportation at your fingertips
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

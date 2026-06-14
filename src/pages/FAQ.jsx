@@ -13,30 +13,30 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm mb-6">
-            <HelpCircle size={40} />
+          <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 backdrop-blur-sm mb-4 sm:mb-6">
+            <HelpCircle className="w-8 h-8 sm:w-10 sm:h-10" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Frequently Asked Questions</h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Frequently Asked Questions</h1>
+          <p className="text-base sm:text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto">
             Find answers to common questions about Falcon Ride
           </p>
         </div>
       </section>
 
       {/* FAQ Content */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="p-8 border-2 border-gray-100 shadow-xl">
-            <Accordion type="single" collapsible className="w-full space-y-4">
+          <Card className="p-4 sm:p-8 border-2 border-gray-100 shadow-xl">
+            <Accordion type="single" collapsible className="w-full space-y-3 sm:space-y-4">
               {mockData.faqData.map((faq) => (
                 <AccordionItem 
                   key={faq.id} 
                   value={`item-${faq.id}`}
-                  className="border-2 border-gray-100 rounded-lg px-6 hover:border-[#4A90A4] transition-all duration-300"
+                  className="border-2 border-gray-100 rounded-lg px-3 sm:px-6 hover:border-[#4A90A4] transition-all duration-300"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-[#0A2540] hover:text-[#4A90A4] py-5">
+                  <AccordionTrigger className="text-left font-semibold text-sm sm:text-base text-[#0A2540] hover:text-[#4A90A4] py-4 sm:py-5">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-700 leading-relaxed pb-5">
@@ -48,7 +48,7 @@ const FAQ = () => {
           </Card>
 
           {/* Still Have Questions */}
-          <Card className="mt-12 p-8 bg-gradient-to-br from-[#4A90A4]/10 to-[#0A2540]/10 border-2 border-[#4A90A4]/20 text-center">
+          <Card className="mt-8 sm:mt-12 p-5 sm:p-8 bg-gradient-to-br from-[#4A90A4]/10 to-[#0A2540]/10 border-2 border-[#4A90A4]/20 text-center">
             <h2 className="text-2xl font-bold text-[#0A2540] mb-4">Still Have Questions?</h2>
             <p className="text-gray-700 mb-6">
               Can't find the answer you're looking for? Our support team is here to help.
@@ -63,13 +63,13 @@ const FAQ = () => {
       </section>
 
       {/* Quick Actions */}
-      <section className="py-16 bg-white">
+      <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0A2540] text-center mb-8 sm:mb-12">
             Quick Actions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <Card className="p-8 text-center hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-[#4A90A4] group cursor-pointer">
+            <Card className="p-5 sm:p-8 text-center hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-[#4A90A4] group cursor-pointer">
               <h3 className="text-2xl font-bold text-[#0A2540] mb-3 group-hover:text-[#4A90A4] transition-colors duration-300">
                 For Customers
               </h3>
@@ -83,7 +83,7 @@ const FAQ = () => {
               </a>
             </Card>
 
-            <Card className="p-8 text-center hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-[#4A90A4] group cursor-pointer">
+            <Card className="p-5 sm:p-8 text-center hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-[#4A90A4] group cursor-pointer">
               <h3 className="text-2xl font-bold text-[#0A2540] mb-3 group-hover:text-[#4A90A4] transition-colors duration-300">
                 For Drivers
               </h3>

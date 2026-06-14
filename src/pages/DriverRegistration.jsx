@@ -8,21 +8,21 @@ import {
 
 const DriverRegistration = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24 pb-16">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24 sm:pt-32 pb-12 sm:pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-[#0A2540] mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A2540] mb-4 sm:mb-6">
             Drive with Falcon Ride
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto">
             Join our community of drivers and start earning on your own schedule
           </p>
         </div>
 
         {/* Benefits Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <Card className="p-8 text-center border-2 border-[#4A90A4]/20 hover:border-[#4A90A4] transition-all duration-300 hover:shadow-xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-16">
+          <Card className="p-5 sm:p-8 text-center border-2 border-[#4A90A4]/20 hover:border-[#4A90A4] transition-all duration-300 hover:shadow-xl">
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#4A90A4]/20 to-[#0A2540]/20 mb-6">
               <Calendar className="text-[#4A90A4]" size={40} />
             </div>
@@ -32,7 +32,7 @@ const DriverRegistration = () => {
             </p>
           </Card>
 
-          <Card className="p-8 text-center border-2 border-[#D4AF37]/20 hover:border-[#D4AF37] transition-all duration-300 hover:shadow-xl">
+          <Card className="p-5 sm:p-8 text-center border-2 border-[#D4AF37]/20 hover:border-[#D4AF37] transition-all duration-300 hover:shadow-xl">
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#D4AF37]/20 to-[#B8941F]/20 mb-6">
               <TrendingUp className="text-[#D4AF37]" size={40} />
             </div>
@@ -42,7 +42,7 @@ const DriverRegistration = () => {
             </p>
           </Card>
 
-          <Card className="p-8 text-center border-2 border-[#4A90A4]/20 hover:border-[#4A90A4] transition-all duration-300 hover:shadow-xl">
+          <Card className="p-5 sm:p-8 text-center border-2 border-[#4A90A4]/20 hover:border-[#4A90A4] transition-all duration-300 hover:shadow-xl">
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#4A90A4]/20 to-[#0A2540]/20 mb-6">
               <Wallet className="text-[#4A90A4]" size={40} />
             </div>
@@ -54,12 +54,12 @@ const DriverRegistration = () => {
         </div>
 
         {/* Main CTA Section */}
-        <Card className="p-12 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white text-center border-0 shadow-2xl mb-16">
-          <Smartphone className="mx-auto mb-6 text-[#D4AF37]" size={80} />
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <Card className="p-6 sm:p-8 md:p-12 bg-gradient-to-br from-[#0A2540] to-[#4A90A4] text-white text-center border-0 shadow-2xl mb-10 sm:mb-16">
+          <Smartphone className="mx-auto mb-4 sm:mb-6 text-[#D4AF37]" size={64} />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Download the Driver App
           </h2>
-          <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-10 max-w-2xl mx-auto">
             Get started in minutes. Download our driver app, complete your profile, and start earning today.
           </p>
           
@@ -89,7 +89,7 @@ const DriverRegistration = () => {
 
         {/* Additional Benefits */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0A2540] text-center mb-8 sm:mb-12">
             Why Drivers Choose Falcon Ride
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -123,7 +123,7 @@ const DriverRegistration = () => {
         </div>
 
         {/* Requirements Section */}
-        <Card className="p-8 bg-blue-50 border-2 border-blue-200">
+        <Card className="p-5 sm:p-8 bg-blue-50 border-2 border-blue-200">
           <h3 className="text-2xl font-bold text-[#0A2540] mb-6 text-center">Driver Requirements</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div>
